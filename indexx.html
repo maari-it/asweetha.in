@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashweetha for Nellai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="h-10 w-10 flex items-center justify-center rounded-xl bg-indigo-600 text-white font-bold">A</span>
+        <span data-en="Ashweetha for Nellai" data-ta="அஷ்வீத்தா நெல்லைக்காக" class="font-semibold">Ashweetha for Nellai</span>
+      </a>
+      <!-- Nav -->
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#about" data-en="About" data-ta="எங்களை பற்றி">About</a>
+        <a href="#impact" data-en="Impact" data-ta="விளைவு">Impact</a>
+        <a href="#faq" data-en="FAQ" data-ta="அடிக்கடி கேள்விகள்">FAQ</a>
+      </nav>
+      <!-- Buttons -->
+      <div class="flex gap-3">
+        <button id="translateBtn" class="border px-3 py-1 rounded text-indigo-600">தமிழ்</button>
+        <button id="openDonate" data-en="Donate" data-ta="நன்கொடை அளிக்கவும்" class="bg-indigo-600 px-4 py-2 text-white rounded">Donate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 data-en="Together, let’s build a brighter Nellai 🌱" data-ta="ஒன்றாக சேர்ந்து ஒரு பிரகாசமான நெல்லையை கட்டுவோம் 🌱" class="text-3xl font-bold mb-4">Together, let’s build a brighter Nellai 🌱</h1>
+      <p data-en="Your support empowers education and growth for the people of Tirunelveli." data-ta="உங்கள் ஆதரவு கல்வி மற்றும் வளர்ச்சிக்கு வலுவூட்டுகிறது." class="mb-6">Your support empowers education and growth for the people of Tirunelveli.</p>
+      <button id="heroDonate" data-en="Donate Now" data-ta="இப்போதே நன்கொடை அளிக்கவும்" class="bg-indigo-600 text-white px-5 py-3 rounded">Donate Now</button>
+    </div>
+    <div>
+      <img src="main-image.jpg" alt="Nellai community" class="rounded-xl shadow">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 data-en="About Our Mission" data-ta="எங்கள் நோக்கம் பற்றி" class="text-2xl font-bold mb-4">About Our Mission</h2>
+    <p data-en="We work to empower youth and communities of Nellai through education and opportunities." data-ta="நாங்கள் கல்வி மற்றும் வாய்ப்புகள் மூலம் நெல்லை இளைஞர்கள் மற்றும் சமூகங்களை வலுப்படுத்த செயற்படுகிறோம்.">We work to empower youth and communities of Nellai through education and opportunities.</p>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-6">
+    <div class="p-6 bg-white rounded shadow">
+      <h3 data-en="Education Programs" data-ta="கல்வி திட்டங்கள்" class="font-bold mb-2">Education Programs</h3>
+      <p data-en="Scholarships and mentorship for students." data-ta="மாணவர்களுக்கு உதவித்தொகை மற்றும் வழிகாட்டுதல்.">Scholarships and mentorship for students.</p>
+    </div>
+    <div class="p-6 bg-white rounded shadow">
+      <h3 data-en="Healthcare Support" data-ta="சுகாதார உதவி" class="font-bold mb-2">Healthcare Support</h3>
+      <p data-en="Basic healthcare facilities for rural families." data-ta="கிராமப்புற குடும்பங்களுக்கு அடிப்படை சுகாதார வசதிகள்.">Basic healthcare facilities for rural families.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 data-en="Frequently Asked Questions" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்" class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <div class="mb-4">
+      <h4 data-en="How can I donate?" data-ta="நான் எப்படி நன்கொடை அளிக்கலாம்?" class="font-semibold">How can I donate?</h4>
+      <p data-en="Click the donate button and complete the checkout." data-ta="நன்கொடை பொத்தானை கிளிக் செய்து கட்டணத்தை முடிக்கவும்.">Click the donate button and complete the checkout.</p>
+    </div>
+    <div>
+      <h4 data-en="Is my donation tax deductible?" data-ta="என் நன்கொடை வரி விலக்கு பெறுமா?" class="font-semibold">Is my donation tax deductible?</h4>
+      <p data-en="Yes, all donations are tax deductible." data-ta="ஆம், அனைத்து நன்கொடைகளும் வரி விலக்கு பெறும்.">Yes, all donations are tax deductible.</p>
+    </div>
+  </section>
+
+  <!-- DONATE MODAL -->
+  <div id="donateModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white p-6 rounded shadow max-w-md w-full">
+      <h3 data-en="Support Nellai" data-ta="நெல்லைக்கு ஆதரவு" class="text-xl font-bold mb-4">Support Nellai</h3>
+      <input type="number" placeholder="Amount" class="w-full border px-3 py-2 mb-4 rounded">
+      <button class="bg-indigo-600 text-white px-4 py-2 rounded">Proceed to Checkout</button>
+      <button id="closeDonate" class="ml-2 text-slate-600">Close</button>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    // Translation toggle
+    const translateBtn = document.getElementById("translateBtn");
+    let isTamil = false;
+    translateBtn.addEventListener("click", () => {
+      document.querySelectorAll("[data-en][data-ta]").forEach(el => {
+        el.textContent = isTamil ? el.dataset.en : el.dataset.ta;
+      });
+      translateBtn.textContent = isTamil ? "தமிழ்" : "English";
+      isTamil = !isTamil;
+    });
+
+    // Modal toggle
+    const modal = document.getElementById("donateModal");
+    document.querySelectorAll("#openDonate, #heroDonate").forEach(btn =>
+      btn.addEventListener("click", () => modal.classList.remove("hidden"))
+    );
+    document.getElementById("closeDonate").addEventListener("click", () =>
+      modal.classList.add("hidden")
+    );
+  </script>
+
+</body>
+</html>

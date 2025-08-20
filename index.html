@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashweetha for Nellai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="functions.js"></script>
+</head>
+<body class="font-sans">
+
+  <!-- HEADER -->
+<header class="bg-white shadow-sm">
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-600 text-white font-bold">A</span>
+      <span class="text-lg font-semibold" data-en="Ashweetha for Nellai" data-ta="அஷ்வீத்தா நெல்லைக்காக">Ashweetha for Nellai</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+      <a href="#about" data-en="About" data-ta="எங்களை பற்றி">About</a>
+      <a href="#impact" data-en="Impact" data-ta="விளைவு">Impact</a>
+      <a href="#faq" data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button id="translateBtn" class="rounded-lg border px-1 py-1 text-sm font-medium hover:bg-gray-100">தமிழ்</button>
+
+      <button id="openDonate" class="rounded-2xl bg-blue-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-blue-700" 
+        onclick="window.location.href='donation.html'">
+        <span data-en="Donate" data-ta="நன்கொடை">Donate</span>
+      </button>
+
+      <!-- Join Us button added here -->
+      <button class="join-btn rounded-2xl px-4 py-2 text-white font-medium shadow-sm bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 hover:brightness-0 focus:outline-none focus:ring-4 focus:ring-yellow-300 relative overflow-hidden"
+        onclick="window.location.href='Join_as_a_volunteer.html'">
+        Join Us
+      </button>
+    </div>
+  </div>
+</header>
+
+  
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col justify-start text-center px-4 pt-20 pb-20 md:pb-32"
+         style="background: linear-gradient(to right, #38a169, #f6e05e);">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col items-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg"
+        data-en="Empowering Nellai's Future"
+        data-ta="நெல்லையின் எதிர்காலத்தை வலுப்படுத்துதல்">
+        Empowering Nellai's Future
+    </h1>
+    <p class="max-w-xl mx-auto mb-6 text-lg md:text-xl drop-shadow"
+       data-en="Join us in creating opportunities through education and community initiatives." 
+       data-ta="கல்வி மற்றும் சமூக முயற்சிகள் மூலம் வாய்ப்புகளை உருவாக்க எங்களுடன் சேருங்கள்.">
+       Join us in creating opportunities through education and community initiatives.
+    </p>
+    <button class="bg-white text-green-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100"
+       onclick="window.location.href='donation.html'">
+      <span data-en="Donate Now" data-ta="இப்போது நன்கொடை அளிக்கவும்">Donate Now</span>
+    </button>
+  </div>
+
+  <!-- Hero Poster (Bottom Center) -->
+  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
+    <img src="Ashweetha_Hero_poster.png" 
+         alt="Ashweetha Hero" 
+         class="w-40 sm:w-56 md:w-72 lg:w-80">
+  </div>
+</section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4" data-en="About Us" data-ta="எங்களை பற்றி">About Us</h2>
+      <p class="text-gray-700" 
+         data-en="We are dedicated to supporting Nellai’s youth with skills and education." 
+         data-ta="நெல்லையின் இளைஞர்களை திறன்கள் மற்றும் கல்வியால் ஆதரிக்க நாம் அர்ப்பணிக்கப்பட்டுள்ளோம்.">
+         We are dedicated to supporting Nellai’s youth with skills and education.
+      </p>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4" data-en="Our Impact" data-ta="எங்கள் விளைவு">Our Impact</h2>
+      <p class="text-gray-700" 
+         data-en="Over 500 students trained and 20+ community projects initiated." 
+         data-ta="500 க்கும் மேற்பட்ட மாணவர்கள் பயிற்சி பெற்றுள்ளனர் மற்றும் 20+ சமூக திட்டங்கள் தொடங்கப்பட்டுள்ளன.">
+         Over 500 students trained and 20+ community projects initiated.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4" data-en="Frequently Asked Questions" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">Frequently Asked Questions</h2>
+      <p class="text-gray-700" 
+         data-en="Your donations go directly into education programs and local initiatives." 
+         data-ta="உங்கள் நன்கொடைகள் நேரடியாக கல்வி திட்டங்கள் மற்றும் உள்ளூர் முயற்சிகளில் செல்கின்றன.">
+         Your donations go directly into education programs and local initiatives.
+      </p>
+    </div>
+  </section>
+  <!-- Quote Section: Place above the footer -->
+<section class="bg-gradient-to-r from-green-400 via-yellow-200 to-blue-200 py-10">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <div class="flex justify-center mb-4">
+      <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M7 17a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6zm10 0a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6z"/>
+      </svg>
+    </div>
+    <blockquote class="text-2xl italic font-semibold text-gray-800 drop-shadow-lg"
+    data-en="All of us are born into a reality that we blindly accept – until something awakens us and a new world opens up."
+    data-ta="நாம் அனைவரும் ஒரு யதார்த்தத்தில் பிறக்கிறோம், அதை நாம் கண்மூடித்தனமாக ஏற்றுக்கொள்கிறோம் - ஒரு விஷயம் எழுப்பும் போது புதிய ஒரு உலகம் திறக்கும்."
+    >
+      “All of us are born into a reality that we blindly accept – until something awakens us and a new world opens up.”
+    </blockquote>
+    
+  </div>
+</section>
+<!-- Add this after the quote section and before the footer -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6 text-center" data-en="Videos" data-ta="வீடியோக்கள்">Videos</h2>
+    <div class="overflow-x-auto flex gap-8 pb-4" style="scroll-snap-type: x mandatory;">
+      <div class="min-w-[350px] max-w-md flex-shrink-0 scroll-snap-align-start">
+        <div class="aspect-w-16 aspect-h-9 w-full">
+          <iframe 
+            src="https://www.youtube.com/embed/-tqBZ7Huie0" 
+            title="YouTube video 1" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            class="w-full h-full rounded-lg shadow-lg"></iframe>
+        </div>
+      </div>
+      <div class="min-w-[350px] max-w-md flex-shrink-0 scroll-snap-align-start">
+        <div class="aspect-w-16 aspect-h-9 w-full">
+          <iframe 
+            src="https://www.youtube.com/embed/Bg7hbA6IwBM" 
+            title="YouTube video 2" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            class="w-full h-full rounded-lg shadow-lg"></iframe>
+        </div>
+      </div>
+      <!-- Add more videos as needed -->
+    </div>
+    <div class="text-center text-gray-500 mt-2 text-sm">Swipe to see more videos</div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-semibold mb-2" data-en="About Us" data-ta="எங்களை பற்றி">About Us</h4>
+        <p data-en="Working to empower Nellai through education and opportunities." 
+           data-ta="கல்வி மற்றும் வாய்ப்புகள் மூலம் நெல்லையை வலுப்படுத்த வேலை செய்கிறோம்.">
+           Working to empower Nellai through education and opportunities.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-en="Contact_us" data-ta="தொடர்பு">Contact us</h4>
+        <p>Email: <a href="mailto:hello@asnellai.com" class="underline">ashweetha2026@gmail.com</a></p>
+        <p>Phone: +91 0000000000</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-en="Follow Us" data-ta="எங்களை பின்தொடரவும்">Follow Us</h4>
+<div class="flex gap-4">
+  <!-- Facebook -->
+  <a href="#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
+      <circle cx="16" cy="16" r="16" fill="#1877F2"/>
+      <path d="M21.5 16h-3v8h-4v-8h-2v-3h2v-2c0-2.2 1.3-3.5 3.3-3.5.9 0 1.8.1 2 .1v3h-1.1c-.9 0-1.2.4-1.2 1.1v1.3h3.3l-.4 3z" fill="#fff"/>
+    </svg>
+  </a>
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/ashweethanellai/?igsh=MXQ2MnVycjl2d3J3ZQ%3D%3D#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
+      <radialGradient id="insta-gradient" cx="16" cy="16" r="16" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#f9ce34"/>
+        <stop offset="50%" stop-color="#ee2a7b"/>
+        <stop offset="100%" stop-color="#6228d7"/>
+      </radialGradient>
+      <circle cx="16" cy="16" r="16" fill="url(#insta-gradient)"/>
+      <rect x="9" y="9" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle cx="16" cy="16" r="4" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle cx="21.5" cy="10.5" r="1.5" fill="#fff"/>
+    </svg>
+  </a>
+  <!-- X (Twitter) -->
+  <a href="#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="X">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
+      <circle cx="16" cy="16" r="16" fill="#000"/>
+      <path fill="#fff" d="M22.7 9h-3.2l-3.5 5.1-3.5-5.1H9.3l4.2 5.8-4.2 7.2h3.2l3.5-5.1 3.5 5.1h3.2l-4.2-7.2z"/>
+    </svg>
+  </a>
+</div>
+      </div>
+    </div>
+    <div class="text-center border-t border-gray-700 py-4 text-sm">
+      <p data-en="© 2025 Ashweetha for Nellai. All rights reserved." 
+          data-ta="© 2025 Ashweetha for Nellai. All rights reserved.">
+         © 2025 Ashweetha for Nellai. All rights reserved.
+      </p>
+    </div>
+    
+  </footer>
+
+  <!-- TRANSLATE SCRIPT -->
+
+</body>
+</html>

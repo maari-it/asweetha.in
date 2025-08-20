@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashweetha for Nellai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-700 text-white font-bold">A</span>
+        <span class="text-lg font-semibold" data-en="Ashweetha for Nellai" data-ta="நெல்லைக்காக அஷ்விதா">
+          Ashweetha for Nellai
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a href="#about" class="hover:text-slate-900" data-en="About" data-ta="எங்களை பற்றி">About</a>
+        <a href="#impact" class="hover:text-slate-900" data-en="Impact" data-ta="விளைவு">Impact</a>
+        <a href="#faq" class="hover:text-slate-900" data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும்">FAQ</a>
+      </nav>
+
+      <!-- Right buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Translate Button -->
+        <button id="translateBtn" class="rounded-lg bg-gray-200 px-3 py-1 text-sm font-medium hover:bg-gray-300 transition">
+          தமிழ்
+        </button>
+
+        <!-- Donate -->
+        <button class="rounded-2xl bg-blue-700 px-4 py-2 text-white font-medium shadow-sm hover:bg-blue-800 transition">
+          <span data-en="Donate" data-ta="நன்கொடை அளிக்க">Donate</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-800 text-white text-center relative overflow-hidden">
+    <div class="max-w-2xl mx-auto px-4 py-16">
+      <!-- Campaign Title -->
+      <h1 class="text-4xl font-extrabold mb-4 text-yellow-400"
+          data-en="Ashweetha for Nellai"
+          data-ta="நெல்லைக்காக அஷ்விதா">
+          Ashweetha for Nellai
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-xl font-semibold mb-6"
+         data-en="Together for Nellai’s Future"
+         data-ta="நெல்லையின் எதிர்காலத்திற்காக ஒன்றுபடுவோம்">
+         Together for Nellai’s Future
+      </p>
+
+      <!-- Donate Button -->
+      <button class="bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 transition">
+        <span data-en="DONATE" data-ta="நன்கொடை அளிக்க">DONATE</span>
+      </button>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+      <img src="Ashweetha_Hero_poster.png" alt="Ashweetha Hero" class="w-64 md:w-80">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 mt-10">
+    <p data-en="© 2025 Ashweetha for Nellai. All Rights Reserved."
+       data-ta="© 2025 நெல்லைக்காக அஷ்விதா. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">
+       © 2025 Ashweetha.com. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- Translation Script -->
+  <script>
+    const translateBtn = document.getElementById("translateBtn");
+    let currentLang = "en"; // default English
+
+    translateBtn.addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "ta" : "en";
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+      });
+      translateBtn.innerText = currentLang === "en" ? "தமிழ்" : "EN";
+    });
+  </script>
+
+</body>
+</html>
