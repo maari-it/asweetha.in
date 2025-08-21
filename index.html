@@ -9,33 +9,90 @@
 </head>
 <body class="font-sans">
   <!-- HEADER -->
-<header class="bg-white shadow-sm">
+<header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 shadow-lg sticky top-0 z-50">
   <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2">
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-blue-600 text-white font-bold">A</span>
-      <span class="text-lg font-semibold" data-en="Ashweetha for Nellai" data-ta="அஷ்வீத்தா நெல்லைக்காக">Ashweetha for Nellai</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
-      <a href="#about" data-en="About" data-ta="எங்களை பற்றி">About</a>
-      <a href="#impact" data-en="Impact" data-ta="விளைவு">Impact</a>
-      <a href="#faq" data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">FAQ</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <button id="translateBtn" class="rounded-lg border px-1 py-1 text-sm font-medium hover:bg-gray-100">தமிழ்</button>
 
-      <button id="openDonate" class="rounded-2xl bg-blue-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-blue-700" 
-        onclick="window.location.href='/Donation/'">
+    <!-- Logo + Title (fixed width) -->
+<a href="#" class="flex items-center gap-2 flex-shrink-0 w-64">
+  <img src="/assets/logo.png" class="h-10 w-10 rounded-2xl border-2 border-white/70" alt="Logo" />
+  <span class="text-xl md:text-2xl font-bold text-yellow-400 drop-shadow-lg font-serif"
+        data-en="Ashweetha for Tirunelveli"
+        data-ta="அஷ்வீதா நெல்லைக்காக"
+        style="text-shadow: 2px 2px 4px rgba(3, 0, 0, 0.5);">
+    <span class="block">Ashweetha</span>
+    <span class="block">Nellai</span>
+  </span>
+</a>
+
+
+
+    <!-- Right-side buttons -->
+    <div class="flex items-center gap-4 flex-shrink-0">
+      <!-- Translate -->
+      <button id="translateBtn" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+        <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
+      </button>
+
+      <!-- Donate -->
+      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium shadow-sm hover:bg-blue-700 flex-shrink-0"
+       onclick="window.location.href='/Donation/'">
         <span data-en="Donate" data-ta="நன்கொடை">Donate</span>
       </button>
 
-      <!-- Join Us button added here -->
-      <button class="join-btn rounded-2xl px-4 py-2 text-white font-medium shadow-sm bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 hover:brightness-0 focus:outline-none focus:ring-4 focus:ring-yellow-300 relative overflow-hidden"
-        onclick="window.location.href='/Joinus/'">
-        Join Us
+      <!-- Join Us -->
+      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-medium shadow-sm hover:brightness-110 flex-shrink-0"
+       onclick="window.location.href='/Joinus/'">
+        <span data-en="Join Us" data-ta="எங்களுடன் சேருங்கள்">Join Us</span>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border hover:bg-gray-200">
+        ☰
       </button>
     </div>
   </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden flex-col gap-4 px-4 pb-4 bg-white border-t">
+    <a href="#about" class="block py-2 menu-link" data-en="About" data-ta="எங்களை பற்றி">About</a>
+    <a href="#impact" class="block py-2 menu-link" data-en="Impact" data-ta="விளைவு">Impact</a>
+    <a href="#faq" class="block py-2 menu-link" data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">FAQ</a>
+    <a href="/Donation/" class="block py-2 font-medium text-blue-600 menu-link" data-en="Donate" data-ta="நன்கொடை">Donate</a>
+    <a href="/Joinus/" class="block py-2 font-medium text-pink-600 menu-link">Join Us</a>
+  </div>
 </header>
+
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  // Toggle menu open/close
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent click from bubbling to document
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking any link
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    // If click is outside menu and menu button, hide menu
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+</script>
+
+
+
 
   
 <!-- HERO -->
@@ -174,13 +231,14 @@
       <div>
         <h4 class="font-semibold mb-2" data-en="Follow Us" data-ta="எங்களை பின்தொடரவும்">Follow Us</h4>
 <div class="flex gap-4">
-  <!-- Facebook -->
-  <a href="#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
-      <circle cx="16" cy="16" r="16" fill="#1877F2"/>
-      <path d="M21.5 16h-3v8h-4v-8h-2v-3h2v-2c0-2.2 1.3-3.5 3.3-3.5.9 0 1.8.1 2 .1v3h-1.1c-.9 0-1.2.4-1.2 1.1v1.3h3.3l-.4 3z" fill="#fff"/>
-    </svg>
-  </a>
+  <!-- substack -->
+<a href="https://ashweethafortirunelveli2026.substack.com " 
+   class="hover:opacity-80" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Substack">
+  <img src="/assets/substack.svg" alt="Substack" class="w-5 h-5">
+</a>
   <!-- Instagram -->
   <a href="https://www.instagram.com/ashweethanellai/?igsh=MXQ2MnVycjl2d3J3ZQ%3D%3D#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
@@ -196,7 +254,7 @@
     </svg>
   </a>
   <!-- X (Twitter) -->
-  <a href="#" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="X">
+  <a href="https://x.com/ashweethanellai" class="hover:opacity-80" target="_blank" rel="noopener noreferrer" aria-label="X">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6">
       <circle cx="16" cy="16" r="16" fill="#000"/>
       <path fill="#fff" d="M22.7 9h-3.2l-3.5 5.1-3.5-5.1H9.3l4.2 5.8-4.2 7.2h3.2l3.5-5.1 3.5 5.1h3.2l-4.2-7.2z"/>
