@@ -19,25 +19,106 @@
 </head>
 <body class="flex flex-col min-h-screen text-white">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow-md text-gray-900">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Ashweetha for Nellai</h1>
-      <nav class="flex gap-6">
-        <a href="/" class="hover:text-blue-500" data-en="Home" data-ta="முகப்பு">Home</a>
+  <!-- Header -->
+<header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50">
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
 
-      </nav>
-      <a href="/Donation" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700" data-en="Donate" data-ta="நன்கொடை">Donate</a>
+    <!-- Logo + Title -->
+    <span class="text-xl md:text-2xl font-bold text-yellow-400 drop-shadow-lg font-serif"
+          style="text-shadow: 2px 2px 4px rgba(3, 0, 0, 0.5); display: inline-block;">
+      <img src="/assets/title1.png" alt="Ashweetha for Tirunelveli"
+           class="block h-12 md:h-16 w-auto object-contain">
+    </span>
+
+    <!-- Right-side buttons -->
+    <div class="flex items-center gap-4 flex-shrink-0">
+      <!-- Home Button (Desktop) -->
+      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-green-600 text-white font-medium shadow-sm hover:bg-green-700 flex-shrink-0"
+       onclick="window.location.href='/'">
+        <span data-en="Home" data-ta="முகப்பு">Home</span>
+      </button>
+
+      <!-- Translate -->
+      <button id="translateBtn" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+        <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
+      </button>
+
+      <!-- Donate Button (Desktop) -->
+      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium shadow-sm hover:bg-blue-700 flex-shrink-0"
+       onclick="window.location.href='/Donation/'">
+        <span data-en="Donate" data-ta="தன்னார்வலர் ஆகுங்கள்">Donate</span>
+      </button>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border hover:bg-gray-200">
+        ☰
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 bg-white border-t">
+    <a href="/" class="block py-2 font-medium text-green-600 menu-link" data-en="Home" data-ta="முகப்பு">Home</a>
+    <a href="/Donation/" class="block py-2 font-medium text-blue-600 menu-link" data-en="Donate" data-ta="நன்கொடை">Donate</a>
+  </div>
+</header>
+<script>
+  // Select hamburger button and mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  // Toggle mobile menu on click
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Optional: Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
+
 
   <!-- Volunteer Section -->
-  <main class="flex-grow">
-    <div class="overlay flex flex-col items-center justify-center py-16 px-6">
-      <h2 class="text-4xl font-bold mb-4 text-center" data-en="Join as a Volunteer" data-ta="தன்னார்வலராக சேருங்கள்">Join as a Volunteer</h2>
-      <p class="text-lg mb-8 text-center max-w-2xl" data-en="Be a part of our mission to empower Nellai through education and community initiatives." data-ta="கல்வி மற்றும் சமூக முயற்சிகள் மூலம் நெல்லையை வலுப்படுத்த எங்கள் பணியில் பங்கேற்கவும்.">
-        Be a part of our mission to empower Nellai through education and community initiatives.
-      </p>
+ <main class="flex-grow">
+  <div class="overlay flex flex-col items-center justify-center py-16 px-6">
+
+    <!-- Heading with gradient text and bounce-in animation -->
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center 
+               bg-clip-text text-transparent 
+               bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500
+               animate-bounce"
+        data-en="Join as a Volunteer" data-ta="தன்னார்வலராக சேருங்கள்">
+      Join as a Volunteer
+    </h2>
+
+    <!-- Paragraph with fade-in and slide-up animation -->
+    <p class="text-lg md:text-xl mb-8 text-center max-w-2xl
+          text-white
+          animate-fadeInUp opacity-0"
+       data-en="Be a part of our mission to empower Nellai through education and community initiatives." 
+       data-ta="கல்வி மற்றும் சமூக முயற்சிகள் மூலம் நெல்லையை வலுப்படுத்த எங்கள் பணியில் பங்கேற்கவும்.">
+      Be a part of our mission to empower Nellai through education and community initiatives.
+    </p>
+    <style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 2;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+</style>
 
       <!-- Volunteer Form -->
 <div class="bg-white text-gray-900 rounded-2xl shadow-lg p-4 w-full max-w-3xl mx-auto">
@@ -55,10 +136,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white text-gray-800 py-6 text-center">
-    <p data-en="© 2025 Ashweetha for Nellai. All rights reserved." data-ta="© 2025 அஷ்வீதா நெல்லைக்காக. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">
-      © 2025 Ashweetha for Nellai. All rights reserved.
-    </p>
+  <footer class="bg-gray-900 text-gray-300 text-sm py-6 text-center">
+    © 2025 Ashweetha for Nellai. All rights reserved.
   </footer>
 
 </body>
