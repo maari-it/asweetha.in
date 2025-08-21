@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="functions.js"></script>
+  <title>Volunteer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #2e7d32, #fdd835), 
+                  url('https://images.unsplash.com/photo-1559027615-ce3f64a7d4ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen text-white">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md text-gray-900">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Ashweetha for Nellai</h1>
+      <nav class="flex gap-6">
+        <a href="/" class="hover:text-blue-500" data-en="Home" data-ta="முகப்பு">Home</a>
+
+      </nav>
+      <a href="/Donation" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700" data-en="Donate" data-ta="நன்கொடை">Donate</a>
+    </div>
+  </header>
+
+  <!-- Volunteer Section -->
+  <main class="flex-grow">
+    <div class="overlay flex flex-col items-center justify-center py-16 px-6">
+      <h2 class="text-4xl font-bold mb-4 text-center" data-en="Join as a Volunteer" data-ta="தன்னார்வலராக சேருங்கள்">Join as a Volunteer</h2>
+      <p class="text-lg mb-8 text-center max-w-2xl" data-en="Be a part of our mission to empower Nellai through education and community initiatives." data-ta="கல்வி மற்றும் சமூக முயற்சிகள் மூலம் நெல்லையை வலுப்படுத்த எங்கள் பணியில் பங்கேற்கவும்.">
+        Be a part of our mission to empower Nellai through education and community initiatives.
+      </p>
+
+      <!-- Volunteer Form -->
+      <form class="bg-white text-gray-900 rounded-2xl shadow-lg p-8 w-full max-w-lg">
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold" data-en="Full Name" data-ta="முழுப்பெயர்">Full Name</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Enter your name">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold" data-en="Email Address" data-ta="மின்னஞ்சல் முகவரி">Email Address</label>
+          <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Enter your email">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold" data-en="Phone Number" data-ta="தொலைபேசி எண்">Phone Number</label>
+          <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Enter your phone number">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold" data-en="Preferred Role" data-ta="விரும்பிய பங்கு">Preferred Role</label>
+          <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500">
+            <option data-en="Community Outreach" data-ta="சமூக அணுகல்">Community Outreach</option>
+            <option data-en="Education Support" data-ta="கல்வி ஆதரவு">Education Support</option>
+            <option data-en="Event Volunteer" data-ta="நிகழ்ச்சி தன்னார்வலர்">Event Volunteer</option>
+            <option data-en="Other" data-ta="மற்றவை">Other</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold" data-en="Why do you want to volunteer?" data-ta="ஏன் தன்னார்வலராக விரும்புகிறீர்கள்?">Why do you want to volunteer?</label>
+          <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Share your thoughts"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700" data-en="Submit" data-ta="சமர்ப்பிக்கவும்">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-gray-800 py-6 text-center">
+    <p data-en="© 2025 Ashweetha for Nellai. All rights reserved." data-ta="© 2025 அஷ்வீதா நெல்லைக்காக. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">
+      © 2025 Ashweetha for Nellai. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
