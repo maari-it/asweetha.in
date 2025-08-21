@@ -14,13 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTranslations(currentLang);
 
   const btn = document.getElementById("translateBtn");
-  if (btn) {
-    btn.textContent = currentLang === "en" ? "தமிழ்" : "English";
-    btn.addEventListener("click", () => {
-      currentLang = currentLang === "en" ? "ta" : "en";
-      localStorage.setItem("userLang", currentLang);
-      applyTranslations(currentLang);
-      btn.textContent = currentLang === "en" ? "தமிழ்" : "English";
-    });
+if (btn) {
+  function updateBtnUI() {
+    if (currentLang === "en") {
+      btn.classList.remove("bg-gradient-to-r", "from-yellow-400", "via-red-500", "to-pink-500", "text-white");
+      btn.classList.add("bg-white", "hover:bg-gray-100", "border");
+    } else {
+      btn.classList.add("bg-gradient-to-r", "from-yellow-400", "via-red-500", "to-pink-500", "text-white");
+      btn.classList.remove("bg-white", "hover:bg-gray-100", "border");
+    }
   }
+
+  updateBtnUI();
+
+  btn.addEventListener("click", () => {
+    currentLang = currentLang === "en" ? "ta" : "en";
+    localStorage.setItem("userLang", currentLang);
+    applyTranslations(currentLang);
+    updateBtnUI();
+  });
+}
+
 });

@@ -5,7 +5,7 @@
   <title>Donation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="functions.js"></script>
+  <script src="/functions.js"></script>
 
   
 </head>
@@ -55,17 +55,20 @@
       </p>
 
       <!-- Donation Form -->
-      <form id="donationForm" class="space-y-5">
-        <input type="text" name="name" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-400" placeholder="Your Name" data-en="Your Name" data-ta="உங்கள் பெயர்">
-        <input type="email" name="email" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-400" placeholder="Your Email" data-en="Your Email" data-ta="உங்கள் மின்னஞ்சல்">
-        <input type="number" name="amount" min="10" step="10" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-400" placeholder="Donation Amount (₹)" data-en="Donation Amount (₹)" data-ta="நன்கொடை தொகை (₹)">
-        <button type="button" id="rzp-button"
-          class="w-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold py-3 rounded-2xl shadow-md hover:from-green-600 hover:to-blue-700 transition"
-          data-en="Donate Now" data-ta="இப்போது நன்கொடை அளிக்கவும்"
-          >
-          Donate now
-        </button>
-      </form>
+<div class="text-center space-y-6">
+  <p class="font-semibold text-lg">Scan to Donate</p>
+  <img src="/assets/upi-qr.png" alt="UPI QR" class="mx-auto w-48 h-48 rounded-xl shadow-md">
+  <p class="text-blue-600 font-bold text-lg select-all">sampledummy@upi</p>
+  <small class="text-gray-500">Click UPI ID to copy</small>
+</div>
+
+<script>
+  document.querySelector(".select-all").addEventListener("click", function () {
+    navigator.clipboard.writeText(this.textContent.trim());
+    alert("UPI ID copied!");
+  });
+</script>
+
 
       <!-- Success Message (hidden by default) -->
       <div id="successMessage" class="hidden mt-6 p-4 rounded-xl bg-green-50 text-green-800 font-medium">
