@@ -119,9 +119,7 @@
 
 
 <!-- Compact & Stylish Dropdown -->
-<label for="volunteerType" class="block mb-2 text-sm font-bold text-gray-800 text-center"
-       data-en="Choose Volunteer Type"
-       data-ta="தன்னார்வலர் வகையைத் தேர்ந்தெடுக்கவும்">
+<label for="volunteerType" class="block mb-2 text-sm font-bold text-gray-800 text-center">
   Choose Volunteer Type
 <!-- Compact & Stylish Dropdown -->
 </label>
@@ -130,7 +128,7 @@
     class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 bg-gray-50 text-gray-700 font-medium cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition appearance-none">
     <option value="Tirunelveli"
      > Tirunelveli</option>
-    <option value="Global"
+    <option value="Remote Volunteer"
     > Global</option>
   </select>
   <!-- Custom Arrow -->
@@ -141,9 +139,6 @@
     </svg>
   </div>
 </div>
-
-
-
 
   <!-- Tirunelveli Form -->
   <div id="tirunelveliForm" class="form-container">
@@ -186,7 +181,7 @@
   const remoteForm = document.getElementById("remoteForm");
 
   volunteerType.addEventListener("change", () => {
-    if (volunteerType.value === "tirunelveli") {
+    if (volunteerType.value === "Tirunelveli") {
       tirunelveliForm.classList.remove("hidden");
       remoteForm.classList.add("hidden");
     } else {
