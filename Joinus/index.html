@@ -34,62 +34,50 @@
 <body class="flex flex-col min-h-screen text-white">
 
   <!-- Header -->
-<header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50">
-  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+<header class="flex items-center justify-between px-4 bg-gray-900 h-28">
+  <!-- Logo aligned left -->
+  <a href="/" class="flex items-center">
+    <img src="/assets/Ashweetha_title.png" 
+         alt="Ashweetha for Tirunelveli"
+         class="object-contain"
+         style="height: 200px; width: auto; max-height: 200px;">
+  </a>
 
-    <!-- Logo + Title -->
-    <span class="text-xl md:text-2xl font-bold text-yellow-400 drop-shadow-lg font-serif"
-          style="text-shadow: 2px 2px 4px rgba(3, 0, 0, 0.5); display: inline-block;">
-      <img src="/assets/title1.png" alt="Ashweetha for Tirunelveli"
-           class="block h-12 md:h-16 w-auto object-contain">
-    </span>
+  <!-- Right-side buttons -->
+  <div class="flex items-center gap-4 flex-shrink-0">
 
-    <!-- Right-side buttons -->
-    <div class="flex items-center gap-4 flex-shrink-0">
-      <!-- Home Button (Desktop) -->
-      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-green-600 text-white font-medium shadow-sm hover:bg-green-700 flex-shrink-0"
-       onclick="window.location.href='/'">
-        <span data-en="Home" data-ta="முகப்பு">Home</span>
-      </button>
+    <!-- Home -->
+    <!-- Desktop version -->
+    <button onclick="window.location.href='/'"
+      class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-green-600 text-white font-medium shadow-sm hover:bg-green-700">
+      <span data-en="Home" data-ta="முகப்பு">Home</span>
+    </button>
+    <!-- Mobile version (icon only) -->
+    <button onclick="window.location.href='/'"
+      class="flex md:hidden items-center justify-center w-10 h-10 rounded-lg bg-green-600 hover:bg-green-700 shadow-sm">
+      <img src="/assets/home.png" alt="Home" class="w-6 h-6">
+    </button>
 
-      <!-- Translate -->
-      <button id="translateBtn" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
-        <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
-      </button>
+    <!-- Translate (always icon) -->
+    <button id="translateBtn"
+      class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+      <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
+    </button>
 
-      <!-- Donate Button (Desktop) -->
-      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium shadow-sm hover:bg-blue-700 flex-shrink-0"
-       onclick="window.location.href='/Donation/'">
-        <span data-en="Donate" data-ta="நன்கொடை">Donate</span>
-      </button>
+    <!-- Join Us -->
+    <!-- Desktop version -->
+    <button onclick="window.location.href='/Donation/'"
+      class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-blue-600 hover:bg-yellow-700 text-white font-medium shadow-sm hover:brightness-110">
+      <span data-en="Donate" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</span>
+    </button>
+    <!-- Mobile version (icon only) -->
+    <button onclick="window.location.href='/Donation/'"
+      class="flex md:hidden items-center justify-center w-10 h-10 rounded-lg bg-blue-600 hover:bg-yellow-700 shadow-sm">
+      <img src="/assets/donate_icon.png" alt="Join Us" class="w-10 h-10">
+    </button>
 
-      <!-- Hamburger (Mobile) -->
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border hover:bg-gray-200">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 bg-white border-t">
-    <a href="/" class="block py-2 font-medium text-green-600 menu-link" data-en="Home" data-ta="முகப்பு">Home</a>
-    <a href="/Donation/" class="block py-2 font-medium text-blue-600 menu-link" data-en="Donate" data-ta="நன்கொடை">Donate</a>
   </div>
 </header>
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
-</script>
 
 
   <!-- Volunteer Section -->

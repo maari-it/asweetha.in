@@ -16,85 +16,57 @@
   </div>
     
 
-  <!-- Header (reuse from main site for branding) -->
-<header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50">
-  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+<!-- HEADER -->
+<header class="flex items-center justify-between px-4 bg-gray-900 h-28">
+  <!-- Logo aligned left -->
+  <a href="/" class="flex items-center">
+    <img src="/assets/Ashweetha_title.png" 
+         alt="Ashweetha for Tirunelveli"
+         class="object-contain"
+         style="height: 200px; width: auto; max-height: 200px;">
+  </a>
 
-    <!-- Logo + Title -->
-    <span class="text-xl md:text-2xl font-bold text-yellow-400 drop-shadow-lg font-serif"
-          style="text-shadow: 2px 2px 4px rgba(3, 0, 0, 0.5); display: inline-block;">
-      <img src="/assets/title1.png" alt="Ashweetha for Tirunelveli"
-           class="block h-12 md:h-16 w-auto object-contain">
-    </span>
+  <!-- Right-side buttons -->
+  <div class="flex items-center gap-4 flex-shrink-0">
 
-    <!-- Right-side buttons -->
-    <div class="flex items-center gap-4 flex-shrink-0">
-      <!-- Home Button (Desktop) -->
-      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-green-600 text-white font-medium shadow-sm hover:bg-green-700 flex-shrink-0"
-       onclick="window.location.href='/'">
-        <span data-en="Home" data-ta="முகப்பு">Home</span>
-      </button>
+    <!-- Home -->
+    <!-- Desktop version -->
+    <button onclick="window.location.href='/'"
+      class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-green-600 text-white font-medium shadow-sm hover:bg-green-700">
+      <span data-en="Home" data-ta="முகப்பு">Home</span>
+    </button>
+    <!-- Mobile version (icon only) -->
+    <button onclick="window.location.href='/'"
+      class="flex md:hidden items-center justify-center w-10 h-10 rounded-lg bg-green-600 hover:bg-green-700 shadow-sm">
+      <img src="/assets/home.png" alt="Home" class="w-6 h-6">
+    </button>
 
-      <!-- Translate -->
-      <button id="translateBtn" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
-        <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
-      </button>
+    <!-- Translate (always icon) -->
+    <button id="translateBtn"
+      class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+      <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
+    </button>
 
-      <!-- Join Us -->
-      <button class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-medium shadow-sm hover:brightness-110 flex-shrink-0"
-       onclick="window.location.href='/Joinus/'">
-        <span data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</span>
-      </button>
+    <!-- Join Us -->
+    <!-- Desktop version -->
+    <button onclick="window.location.href='/Joinus/'"
+      class="hidden md:flex items-center justify-center px-4 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-medium shadow-sm hover:brightness-110">
+      <span data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</span>
+    </button>
+    <!-- Mobile version (icon only) -->
+    <button onclick="window.location.href='/Joinus/'"
+      class="flex md:hidden items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 shadow-sm hover:brightness-110">
+      <img src="/assets/join-us.png" alt="Join Us" class="w-10 h-10">
+    </button>
 
-      <!-- Hamburger (Mobile) -->
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border hover:bg-gray-200">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 bg-white border-t">
-    <a href="/" class="block py-2 font-medium text-green-600 menu-link" data-en="Home" data-ta="முகப்பு">Home</a>
-    <a href="/Joinus/" class="block py-2 font-medium text-pink-600 menu-link" data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</a>
   </div>
 </header>
-
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const menuLinks = document.querySelectorAll(".menu-link");
-
-  // Toggle menu open/close
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent click from bubbling to document
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  // Close menu when clicking any link
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", (e) => {
-    // If click is outside menu and menu button, hide menu
-    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      mobileMenu.classList.add("hidden");
-    }
-  });
-</script>
-
-
-
   <!-- Main Donation Container -->
   <main class="flex-grow flex items-center justify-center px-4 pt-10 pb-16">
     <div class="w-full max-w-lg bg-white rounded-3xl shadow-lg p-8 md:p-10 text-center relative">
       <h1 class="text-3xl md:text-4xl font-bold mb-4 text-blue-700 drop-shadow-lg"
-        data-en="Let's make it Together"
-        data-ta="ஒன்றாக சேர்ந்து செயற்படுவோம்" 
+        data-en="Contribute to the mission"
+        data-ta="குறிக்கோளில் பங்கேற்கவும்" 
       >Let's make it Together</h1>
 
 
@@ -109,10 +81,10 @@
 
       <!-- Donation Form -->
 <div class="text-center space-y-6">
-  <p class="font-semibold text-lg">Scan to Donate</p>
-  <img src="/assets/upi-qr.jpg" alt="UPI QR" class="mx-auto w-48 h-48 rounded-xl shadow-md">
   <p class="text-blue-600 font-bold text-lg select-all">9600115082@icici</p>
   <small class="text-gray-500">Click UPI ID to copy</small>
+  <p class="font-semibold text-lg">Scan to Donate</p>
+  <img src="/assets/upi-qr.jpg" alt="UPI QR" class="mx-auto w-48 h-48 rounded-xl shadow-md">
 </div>
 
 <script>
