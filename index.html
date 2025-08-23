@@ -11,22 +11,30 @@
 <body class="font-sans">
   <!-- HEADER -->
 <header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50 h-16 md:h-20">
-  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between relative h-full">
+  <div class="w-full max-w-6xl pl-0 pr-4 py-3 flex items-center justify-between relative h-full">
 
-    <!-- Logo + Title -->
-<span class="relative flex items-center" style="height:100%;">
+    <!-- Logo + Title (Left corner) -->
+<a href="/" class="flex items-center h-full">
   <img src="/assets/Ashweetha_title.png" 
        alt="Ashweetha for Tirunelveli"
        class="object-contain"
-       style="height: auto; max-height: 200px; width: auto;">
-</span>
-
+       style="max-height: 200px; width: auto; height: auto;">
 </a>
-
-
 
     <!-- Right-side buttons -->
     <div class="flex items-center gap-4 flex-shrink-0">
+
+      <!-- Social Media Icons -->
+      <a href="https://ashweethafortirunelveli2026.substack.com" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+        <img src="/assets/substack.svg" alt="substack" class="h-5 w-5">
+      </a>
+      <a href="https://www.instagram.com/ashweethanellai/?igsh=MXQ2MnVycjl2d3J3ZQ%3D%3D#" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+        <img src="/assets/instalog.jpeg" alt="instagram" class="h-6 w-6">
+      </a>
+      <a href="https://x.com/ashweethanellai" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
+        <img src="/assets/xlogo.png" alt="X" class="h-7 w-7">
+      </a>
+
       <!-- Translate -->
       <button id="translateBtn" class="flex items-center justify-center w-10 h-10 rounded-lg border bg-white hover:bg-gray-100">
         <img src="/assets/translatebtn.png" class="h-5 w-5" alt="Translate">
@@ -52,18 +60,17 @@
   </div>
 
   <!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 bg-white border-t">
-  <a href="#about" class="menu-link block py-2 text-black" data-en="About" data-ta="எங்களை பற்றி">About</a>
-  <a href="#impact" class="menu-link block py-2 text-black" data-en="Impact" data-ta="விளைவு">Impact</a>
-  <a href="#faq" class="menu-link block py-2 text-black" data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">FAQ</a>
-
-  <a href="/Donation/" class="block py-2 font-medium text-blue-600 menu-link" data-en="Donate" data-ta="நன்கொடை">Donate</a>
-  <a href="/Joinus/" class="block py-2 font-medium text-pink-600 menu-link" data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</a>
-</div>
+  <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 bg-white border-t">
+      <a href="#about" class="menu-link block py-2 text-black" data-en="About" data-ta="அஷ்விதா பற்றி">About</a>
+  <a href="#unique" class="menu-link block py-2 text-black" 
+     data-en="What sets her apart" data-ta="(அஷ்விதாவின்) தனித்துவம்">Impact</a>
+  <a href="#values" class="menu-link block py-2 text-black" 
+     data-en="Values and vision" data-ta="தொலைநோக்கு மற்றும் ஒழுக்க நெறிகள்">FAQ</a>
+    <a href="/Donation/" class="block py-2 font-medium text-blue-600 menu-link" data-en="Donate" data-ta="நன்கொடை">Donate</a>
+    <a href="/Joinus/" class="block py-2 font-medium text-pink-600 menu-link" data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Join Us</a>
+  </div>
+  
 </header>
-
-
-
 <script>
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -71,7 +78,7 @@
 
   // Toggle menu open/close
   menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent click from bubbling to document
+    e.stopPropagation(); 
     mobileMenu.classList.toggle("hidden");
   });
 
@@ -84,12 +91,12 @@
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
-    // If click is outside menu and menu button, hide menu
     if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
       mobileMenu.classList.add("hidden");
     }
   });
 </script>
+
 
 
 <!-- HERO -->
