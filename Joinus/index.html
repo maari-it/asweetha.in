@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="/functions.js"></script>
+  <script src="/functions.js"></script>
   <title>Volunteer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <style>
@@ -14,6 +14,20 @@
     }
     .overlay {
       background: rgba(0, 0, 0, 0.5);
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 0.3s;
     }
   </style>
 </head>
@@ -63,16 +77,13 @@
   </div>
 </header>
 <script>
-  // Select hamburger button and mobile menu
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  // Toggle mobile menu on click
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
 
-  // Optional: Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
       mobileMenu.classList.add('hidden');
@@ -85,7 +96,7 @@
  <main class="flex-grow">
   <div class="overlay flex flex-col items-center justify-center py-16 px-6">
 
-    <!-- Heading with gradient text and bounce-in animation -->
+    <!-- Heading -->
     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center 
                bg-clip-text text-transparent 
                bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500
@@ -94,7 +105,7 @@
       Join as a Volunteer
     </h2>
 
-    <!-- Paragraph with fade-in and slide-up animation -->
+    <!-- Paragraph -->
     <p class="text-lg md:text-xl mb-8 text-center max-w-2xl
           text-white
           animate-fadeInUp opacity-0"
@@ -102,35 +113,68 @@
        data-ta="கல்வி மற்றும் சமூக முயற்சிகள் மூலம் நெல்லையை வலுப்படுத்த எங்கள் பணியில் பங்கேற்கவும்.">
       Be a part of our mission to empower Nellai through education and community initiatives.
     </p>
-    <style>
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 2;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fadeInUp {
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.3s;
-  }
-</style>
 
       <!-- Volunteer Form -->
 <div class="bg-white text-gray-900 rounded-2xl shadow-lg p-4 w-full max-w-3xl mx-auto">
-  <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfwVCztZwU-X3XSnNEaBnmjDP5YgYTrgxIDXfXY4NSVOhiW1Q/viewform?embedded=true" 
-    width="100%" 
-    height="1200" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0">
-    Loading…
-  </iframe>
+
+
+<!-- Compact & Stylish Dropdown -->
+<label for="volunteerType" class="block mb-2 text-sm font-bold text-gray-800 text-center"
+       data-en="Choose Volunteer Type"
+       data-ta="தன்னார்வலர் வகையைத் தேர்ந்தெடுக்கவும்">
+  Choose Volunteer Type
+<!-- Compact & Stylish Dropdown -->
+</label>
+<div class="relative w-60 mx-auto mb-6">
+  <select id="volunteerType"
+    class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 bg-gray-50 text-gray-700 font-medium cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition appearance-none">
+    <option value="tirunelveli"
+    data-en="Volunteer on Tirunelveli"
+    data-ta="திருநெல்வேலியில் தன்னார்வலராக"
+     > Volunteer on Tirunelveli</option>
+    <option value="remote"
+    data-en="Remote Volunteer"
+    data-ta="தொலைதூர தன்னார்வலர்"
+    > Remote Volunteer</option>
+  </select>
+  <!-- Custom Arrow -->
+  <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</div>
+
+
+
+
+  <!-- Tirunelveli Form -->
+  <div id="tirunelveliForm" class="form-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfwVCztZwU-X3XSnNEaBnmjDP5YgYTrgxIDXfXY4NSVOhiW1Q/viewform?embedded=true" 
+      width="100%" 
+      height="1200" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+
+  <!-- Remote Volunteer Form -->
+  <div id="remoteForm" class="form-container hidden">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeg5hH_6UI0DW00wah6P5nmzEYHX3L2AatPyKFQl0KcP621zw/viewform?embedded=true" 
+      width="100%" 
+      height="1200" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+
 </div>
     </div>
   </main>
@@ -139,6 +183,22 @@
   <footer class="bg-gray-900 text-gray-300 text-sm py-6 text-center">
     © 2025 Ashweetha for Nellai. All rights reserved.
   </footer>
+
+<script>
+  const volunteerType = document.getElementById("volunteerType");
+  const tirunelveliForm = document.getElementById("tirunelveliForm");
+  const remoteForm = document.getElementById("remoteForm");
+
+  volunteerType.addEventListener("change", () => {
+    if (volunteerType.value === "tirunelveli") {
+      tirunelveliForm.classList.remove("hidden");
+      remoteForm.classList.add("hidden");
+    } else {
+      tirunelveliForm.classList.add("hidden");
+      remoteForm.classList.remove("hidden");
+    }
+  });
+</script>
 
 </body>
 </html>
