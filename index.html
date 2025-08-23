@@ -7,16 +7,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="functions.js"></script>
 </head>
+
 <body class="font-sans">
   <!-- HEADER -->
-<header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50">
-  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+<header class="bg-gray-800 text-gray-400 shadow-lg sticky top-0 z-50 h-16 md:h-20">
+  <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between relative h-full">
 
-    <!-- Logo + Title (fixed width) -->
-<span class="text-xl md:text-2xl font-bold text-yellow-400 drop-shadow-lg font-serif"
-      style="text-shadow: 2px 2px 4px rgba(3, 0, 0, 0.5); display: inline-block;">
-  <img src="/assets/title1.png" alt="Ashweetha for Tirunelveli"
-       class="block h-12 md:h-16 w-auto object-contain">
+    <!-- Logo + Title -->
+<span class="relative flex items-center" style="height:100%;">
+  <img src="/assets/Ashweetha_title.png" 
+       alt="Ashweetha for Tirunelveli"
+       class="object-contain"
+       style="height: auto; max-height: 200px; width: auto;">
 </span>
 
 </a>
@@ -112,8 +114,8 @@
 <button class="bg-blue-500 text-white font-semibold px-8 py-3 rounded-full shadow-lg
                hover:bg-yellow-400 hover:text-blue-800 hover:scale-105 hover:shadow-2xl
                transition duration-300 ease-in-out"
-        onclick="window.location.href='/Donation/'">
-  <span data-en="Donate Now" data-ta="இப்போது நன்கொடை அளிக்கவும்">Donate Now</span>
+        onclick="window.location.href='/Joinus/'">
+  <span data-en="Join Us" data-ta="தன்னார்வலர் ஆகுங்கள்">Donate Now</span>
 </button>
 
 
@@ -121,38 +123,300 @@
 
   <!-- Hero Poster -->
   <div class="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end">
-    <img src="Ashweetha_Hero_poster.png" 
+    <img src="/assets/hero_poster_og.png" 
          alt="Ashweetha Hero" 
          class="w-full h-auto md:h-screen object-contain">
   </div>
 </section>
-
-
-
-
   <!-- ABOUT -->
-  <section id="about" class="py-12 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4" data-en="About Us" data-ta="எங்களை பற்றி">About Us</h2>
-      <p class="text-gray-700" 
-         data-en="We are dedicated to supporting Nellai’s youth with skills and education." 
-         data-ta="நெல்லையின் இளைஞர்களை திறன்கள் மற்றும் கல்வியால் ஆதரிக்க நாம் அர்ப்பணிக்கப்பட்டுள்ளோம்.">
-         We are dedicated to supporting Nellai’s youth with skills and education.
-      </p>
+<section id="about" class="about-section">
+  <div class="about-card">
+    <!-- Left Image -->
+    <div class="about-image reveal-left">
+      <img src="/assets/infra2.png" alt="About Us Left">
     </div>
-  </section>
 
-  <!-- IMPACT -->
-  <section id="impact" class="py-12 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4" data-en="Our Impact" data-ta="எங்கள் விளைவு">Our Impact</h2>
-      <p class="text-gray-700" 
-         data-en="Over 500 students trained and 20+ community projects initiated." 
-         data-ta="500 க்கும் மேற்பட்ட மாணவர்கள் பயிற்சி பெற்றுள்ளனர் மற்றும் 20+ சமூக திட்டங்கள் தொடங்கப்பட்டுள்ளன.">
-         Over 500 students trained and 20+ community projects initiated.
+    <!-- Text Content -->
+    <div class="about-text reveal-up">
+      <h2 data-en="About Ashweetha" data-ta="அஷ்விதா வாழ்க்கைக் குறிப்பு:">About Us</h2>
+      <p data-en="Born in Tirunelveli, Tamil Nadu in a family of beedi rollers, Ashweetha is a first-generation college graduate, a TED Speaker and a Harvard Kennedy School Alumnus. For over a decade, she has worked with quiet deep determination and deep care to uplift women and youth across Tamil Nadu. 
+Now, she is contesting the 2026 Tamil Nadu Assembly elections from her hometown, Tirunelveli hoping to build a better future for the community with a focus on education, employment, workers dignity, basic infrastructure and countering drug abuse." 
+         data-ta="தென்தமிழகத்தில் திருநெல்வேலியில் பீடித் தொழிலாளர்களுக்கு மகளாய் பிறந்த இவர், ஒரு முதல் தலைமுறை பட்டதாரி ஆவார். மேலும் இவர் புதுச் சிந்தனைகளை எடுத்துரைக்கும் பொதுத் தளமான டெட் (TED) பேச்சாளர் என்பதும் உலகின் புகழ்பெற்ற பல்கலைக்கழகமான ஹார்வர்ட் பல்கலைக்கழகத்தின் மாணவி என்பதும் குறிப்பிடத்தக்கதாகும். தமிழ்நாடு முழுதும் உள்ள பெண்கள் மற்றும் இளைஞர்களின் மேம்பாட்டுக்காகச் சுமார் பத்து வருடங்களுக்கு மேலாக ஆழ்ந்த உறுதியுடனும், அக்கறையுடனும் இவர் தொடர்ந்து  பணியாற்றி வருகிறார்.
+தற்போது, 2026 ஆம் ஆண்டு நடைபெறவுள்ள தமிழ்நாடு சட்டமன்றத் தேர்தலில் தனது சொந்த ஊரான திருநெல்வேலியிலிருந்து போட்டியிடுகிறார். போதைப்பொருள் பயன்பாட்டுத் தடுப்பு, முக்கிய அடிப்படைக் கட்டமைப்பு, கல்வி மற்றும் வேலைவாய்ப்புகளை மேம்படுத்துதல், மற்றும் தொழிலாளர் நல மேம்பாட்டின் மூலம் நம் சமூகத்தின் எதிர்காலத்தை ஒளிப் படைத்ததாக மாற்ற விரும்புகிறார்.">
+        We are dedicated to supporting Nellai’s youth with skills and education.
       </p>
     </div>
-  </section>
+
+    <!-- Right Image -->
+    <div class="about-image reveal-right">
+      <img src="/assets/nodrugs.png" alt="About Us Right">
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background: #fdfdfd;
+    padding: 60px 20px;
+  }
+
+  .about-card {
+    background: #427c34;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+    overflow: hidden;
+  }
+
+  .about-image,
+  .about-image-right {
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img,
+  .about-image-right img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-text {
+    flex: 1 1 45%;
+    text-align: left;
+  }
+
+  .about-text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* Reveal Animations (hidden initially) */
+  .reveal-left, .reveal-right, .reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+  }
+
+  .reveal-left { transform: translateX(-80px); }
+  .reveal-right { transform: translateX(80px); }
+  .reveal-up { transform: translateY(60px); }
+
+  .active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    .about-image,
+    .about-image-right {
+      width: 100%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .about-image img,
+    .about-image-right img {
+      max-width: 70%;
+    }
+
+    .about-text {
+      text-align: center;
+      margin: 10px auto 0;
+      max-width: 95%;
+    }
+
+    .about-text h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+</style>
+
+
+<script>
+  // Smooth scroll reveal
+  document.addEventListener("scroll", function () {
+    const elements = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up");
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
+  <!-- unique -->
+<section id="unique" class="unique-section">
+  <div class="unique-card">
+    <h2 class="section-title reveal-up" data-en="What sets her apart?" data-ta="இவரின் (அஷ்விதாவின்) தனித்துவம் என்ன?">">
+      What sets her apart?
+    </h2>
+    <ul class="unique-list">
+      <li class="reveal-left">
+        <span class="highlight" 
+      data-en="🌿 A rare combination of lived experience, global policy training, and grassroots exposure" 
+      data-ta="🌿 அர்த்தமுள்ள வாழ்க்கை அனுபவங்கள், உலகளாவிய பொதுக்கொள்கையில் பயிற்சி மற்றும் அடித்தள மக்கள் பற்றிய புரிதலும் கொண்டவர்">
+  🌿 A rare combination of lived experience, global policy training, and grassroots exposure
+</span> 
+
+      </li>
+      <li class="reveal-right">
+        <span class="highlight"
+        data-en="🌱 Founder, Bodhi Tree Foundation: Mentored over 3,000 rural college students each year."
+        data-ta="🌱 போதி ட்ரீ (Bodhi Tree)அறக்கட்டளையின் நிறுவனர்: ஒவ்வொரு ஆண்டும் 3,000 கிராமப்புறக் கல்லூரி மாணவர்களுக்கு வழிகாட்டினார்.">🌱 Founder, Bodhi Tree Foundation: Mentored over 3,000 rural college students each year.</span> 
+      </li>
+      <li class="reveal-left">
+        <span class="highlight"
+        data-en="📊 Consultant, Indian Political Action Committee: Led campaign strategy across 20 districts"
+        data-ta="📊 இந்திய அரசியல் செயற்பாட்டுக் குழுவின் ஆலோசகர்: 20 மாவட்டங்களில் பிரச்சார உத்திகளை வழிநடத்தியுள்ளார். "
+        >📊 Consultant, Indian Political Action Committee: Led campaign strategy across 20 districts.</span> 
+      </li>
+      <li class="reveal-right">
+        <span class="highlight"
+        data-en="🤝 Co-founder, The Penn Collective: Building the political power of women"
+        data-ta="🤝 தி பெண் கலெக்ட்டிவ் (The Penn Collective) நிறுவனத்தின் இணை நிறுவனர்: பெண்களின் அரசியல் அதிகாரத்தை மேம்படுத்துதல். "
+        >🤝 Co-founder, The Penn Collective: Building the political power of women<span> 
+      </li>
+      <li class="reveal-left">
+        <span class="highlight"
+        data-en="🌍 Consultant, World Bank: Contributed to key state policies on women’s employment and senior citizens' welfare."
+        data-ta="உலக வங்கி ஆலோசகர்: பெண்களின் வேலைவாய்ப்பு மற்றும் மூத்த குடிமக்களின் நலன் தொடர்பான முக்கிய மாநில கொள்கைகளுக்குப் பங்களிப்பு."
+        
+        >🌍 Consultant, World Bank: Contributed to key state policies on women’s employment and senior citizens' welfare.
+      </li></span>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .unique-section {
+    background: #f9fafb;
+    padding: 70px 20px;
+  }
+
+  .unique-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+  }
+
+  .section-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #3e6434;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .unique-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .unique-list li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.8s ease, box-shadow 0.3s ease, opacity 0.8s ease;
+    opacity: 0;
+  }
+
+  .unique-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #3e6434;
+  }
+
+  /* Reveal Animations */
+  .reveal-left { transform: translateX(-80px); }
+  .reveal-right { transform: translateX(80px); }
+  .reveal-up { transform: translateY(60px); }
+
+  .active {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .unique-card {
+      padding: 25px;
+    }
+    .section-title {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .unique-list li {
+      font-size: 1rem;
+      padding: 15px;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll reveal using Intersection Observer
+  const revealElements = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+</script>
+
+
 
   <!-- FAQ -->
   <section id="faq" class="py-12 bg-white">
@@ -165,55 +429,199 @@
       </p>
     </div>
   </section>
-  <!-- Quote Section: Place above the footer -->
-<section class="bg-gradient-to-r from-green-400 via-yellow-200 to-blue-200 py-10">
-  <div class="max-w-3xl mx-auto px-4 text-center">
-    <div class="flex justify-center mb-4">
-      <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+<!-- Quote Section -->
+<section class="quote-section">
+  <div class="quote-card reveal-up delay-1">
+    <div class="flex justify-center">
+      <svg class="quote-icon reveal-up delay-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M7 17a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6zm10 0a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6z"/>
       </svg>
     </div>
-    <blockquote class="text-2xl italic font-semibold text-gray-800 drop-shadow-lg"
-    data-en="All of us are born into a reality that we blindly accept – until something awakens us and a new world opens up."
-    data-ta="நாம் அனைவரும் ஒரு யதார்த்தத்தில் பிறக்கிறோம், அதை நாம் கண்மூடித்தனமாக ஏற்றுக்கொள்கிறோம் - ஒரு விஷயம் எழுப்பும் போது புதிய ஒரு உலகம் திறக்கும்."
-    >
+    <blockquote class="quote-text reveal-up delay-2"
+      data-en="All of us are born into a reality that we blindly accept – until something awakens us and a new world opens up."
+      data-ta="நாம் அனைவரும் ஒரு யதார்த்தத்தில் பிறக்கிறோம், அதை நாம் கண்மூடித்தனமாக ஏற்றுக்கொள்கிறோம் - ஒரு விஷயம் எழுப்பும் போது புதிய ஒரு உலகம் திறக்கும்.">
       “All of us are born into a reality that we blindly accept – until something awakens us and a new world opens up.”
     </blockquote>
-    
   </div>
 </section>
-<!-- Add this after the quote section and before the footer -->
+
+<style>
+  /* Transparent section */
+  .quote-section {
+    padding: 120px 20px;
+    background: transparent;
+    text-align: center;
+  }
+
+  /* Gradient glassy card */
+  .quote-card {
+    max-width: 950px;
+    margin: auto;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b, #3a0ca3);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    border-radius: 22px;
+    padding: 60px 40px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4), 0 0 40px rgba(58,12,163,0.3);
+    color: white;
+  }
+
+  /* Larger container only for desktop */
+  @media (min-width: 1024px) {
+    .quote-card {
+      max-width: 1200px;  /* expand wider */
+      padding: 80px 60px; /* more breathing room */
+    }
+    .quote-text {
+      font-size: 2.6rem;  /* bigger font for desktop */
+    }
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Icon */
+  .quote-icon {
+    width: 80px;
+    height: 80px;
+    color: #ffde59;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px #ffde59) drop-shadow(0 0 30px #ffde59);
+    animation: glowPulse 2.5s infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+
+  /* Quote text */
+  .quote-text {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-top: 35px;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    text-shadow: 0px 4px 18px rgba(0,0,0,0.6);
+  }
+
+  /* Reveal Animations */
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  .reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .delay-1 { transition-delay: 0.15s; }
+  .delay-2 { transition-delay: 0.4s; }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .quote-text {
+      font-size: 1.4rem;
+      padding: 0 12px;
+    }
+    .quote-icon {
+      width: 55px;
+      height: 55px;
+    }
+  }
+</style>
+
+<script>
+  // Scroll reveal
+  document.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal-up").forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+<!-- videos -->
 <section class="py-12 bg-white">
   <div class="max-w-4xl mx-auto px-4">
     <h2 class="text-2xl font-bold mb-6 text-center" data-en="Videos" data-ta="வீடியோக்கள்">Videos</h2>
-    <div class="overflow-x-auto flex gap-8 pb-4" style="scroll-snap-type: x mandatory;">
-      <div class="min-w-[350px] max-w-md flex-shrink-0 scroll-snap-align-start">
-        <div class="aspect-w-16 aspect-h-9 w-full">
-          <iframe 
-            src="https://www.youtube.com/embed/-tqBZ7Huie0" 
-            title="YouTube video 1" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
+
+    <!-- OLD LAYOUT: horizontal scroll, snap, proper 16:9 -->
+    <div class="overflow-x-auto flex gap-8 pb-4 snap-x snap-mandatory" style="scroll-snap-type: x mandatory;">
+      <!-- Card 1 -->
+      <div class="min-w-[350px] max-w-md flex-shrink-0 snap-start">
+        <div class="aspect-video w-full">
+          <iframe
+            src="https://www.youtube.com/embed/-tqBZ7Huie0"
+            title="YouTube video 1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
             class="w-full h-full rounded-lg shadow-lg"></iframe>
         </div>
       </div>
-      <div class="min-w-[350px] max-w-md flex-shrink-0 scroll-snap-align-start">
-        <div class="aspect-w-16 aspect-h-9 w-full">
-          <iframe 
-            src="https://www.youtube.com/embed/Bg7hbA6IwBM" 
-            title="YouTube video 2" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
+
+      <!-- Card 2 -->
+      <div class="min-w-[350px] max-w-md flex-shrink-0 snap-start">
+        <div class="aspect-video w-full">
+          <iframe
+            src="https://www.youtube.com/embed/Bg7hbA6IwBM"
+            title="YouTube video 2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
             class="w-full h-full rounded-lg shadow-lg"></iframe>
         </div>
       </div>
+
       <!-- Add more videos as needed -->
     </div>
+
     <div class="text-center text-gray-500 mt-2 text-sm">Swipe to see more videos</div>
   </div>
 </section>
+
+<!-- Fallback  Tailwind's  -->
+<style>
+  .aspect-video { position: relative; width: 100%; }
+  .aspect-video::before { content: ""; display: block; padding-top: 56.25%; } /* 16:9 */
+  .aspect-video > iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+
+
+
+
+
+<style>
+  /* General section styling */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* Reduce the gap between consecutive sections */
+  section + section {
+    margin-top: -30px;  /* decrease gap */
+  }
+
+  /* If About section only needs less bottom padding */
+  .about-section {
+    padding: 60px 20px 30px; /* reduce bottom space */
+  }
+
+  /* If What sets her apart section needs less top padding */
+  .unique-section {
+    padding: 30px 20px 60px; /* reduce top space */
+  }
+</style>
+
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 mt-12">
