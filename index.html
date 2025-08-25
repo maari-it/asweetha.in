@@ -135,6 +135,8 @@
          class="w-full h-auto md:h-screen object-contain">
   </div>
 </section>
+
+
   <!-- ABOUT -->
 <section id="about" class="about-section">
   <div class="about-card">
@@ -582,6 +584,207 @@ Now, she is contesting the 2026 Tamil Nadu Assembly elections from her hometown,
         el.classList.add("active");
       }
     });
+  });
+</script>
+<!-- press portion -->
+<section class="relative px-4 md:px-8 pt-20 pb-16"
+         style="background: linear-gradient(to right, #38a169, #f6e05e);">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 
+           text-gray-800 tracking-wide drop-shadow-md font-serif"
+      data-en="Articles to explore"
+      data-ta="செய்தி மற்றும் கட்டுரைகள்">
+    
+    Featured Press
+  </h2>
+
+  <div class="relative">
+    <!-- Left / Right arrows -->
+    <button id="pressPrev"
+      class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-md">
+      ◀
+    </button>
+    <button id="pressNext"
+      class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-md">
+      ▶
+    </button>
+
+    <!-- Track -->
+    <div id="pressTrack"
+         class="flex flex-nowrap items-stretch gap-4 md:gap-6
+            overflow-x-auto md:overflow-hidden scroll-smooth snap-x snap-mandatory md:snap-none
+            touch-pan-x overscroll-x-contain px-4 md:px-0 pb-4 md:pb-6 scrollbar-hide">
+
+      <!-- Example Card -->
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px]
+                      bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden
+                      flex-shrink-0 flex flex-col justify-between p-6 shadow-md
+                      transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/vigadan1.png" alt="The Nation" class="w-26 h-auto mb-0">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-ta="``டீச்சர்னு பொய் சொல்லி சமூக சேவை பண்ணிட்டு இருந்தேன்” மாநில இளைஞர் விருது பெற்ற அஷ்வீதா"
+          data-en="From Lying About Being a Teacher to Winning State Youth Award: Ashweetha's Journey"
+          >From Lying About Being a Teacher to Winning State Youth Award: Ashweetha's Journey</h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-ta="சுதந்திர தினம் அன்னிக்கு மாநில முதல்வர் கையால இந்த விருது வாங்கின அந்த நிமிஷத்தை என்னால வார்த்தைகளால சொல்லிட முடியலை."
+          data-en="On Independence Day, receiving this award from the hands of our Chief Minister is a moment I simply cannot put into words.I never even dreamed that something like this would happen in my life."
+          >On Independence Day, receiving this award from the hands of our Chief Minister is a moment I simply cannot put into words. Back in my childhood, when I used to roll beedis along with my mother, I never even dreamed that something like this would happen in my life.</p>
+          <a href="https://www.vikatan.com/literature/arts/134202-this-is-my-first-award-interview-with-state-awardee-ashvita" class="text-green-700 font-semibold mt-3 inline-block hover:underline".
+          target="_blank" rel="noopener noreferrer"
+          data-ta="மேலும் வாசிக்க →"
+          data-en="Read More →"
+          >Read More →</a>
+        </div>
+      </article>
+
+      <!-- 5 more cards -->
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px] bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden flex-shrink-0 flex flex-col justify-between p-6 shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/your_story.png" alt="YourStory" class="w-24 h-auto mb-0">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-en="From a timid tamarind plucking kid to a mentor to rural graduates"
+          data-ta="ஒரு பயந்த புளியங்கொட்டி குழந்தையிலிருந்து கிராமப்புற பட்டதாரிகளுக்கு வழிகாட்டியாக">
+          >From a timid tamarind plucking kid to a mentor to rural graduates</h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-en="My parents are illiterate and are not aware of education, so there was a need to struggle and convince my parents every time I wanted to go up the ladder of education..."
+          data-ta="நான் கல்வியின் படிநிலையை உயர்த்த விரும்பும் ஒவ்வொரு முறையும் என் பெற்றோரை சமரசம் செய்து நம்ப வைக்க வேண்டிய அவசியம் இருந்தது..."
+          >My parents are illiterate and are not aware of education, so there was a need to struggle and convince my parents every time I wanted to go up the ladder of education...</p>
+          <a href="https://yourstory.com/2015/08/ashweetha-shetty" class="text-green-700 font-semibold mt-3 inline-block hover:underline"
+          target="_blank" rel="noopener noreferrer"
+          data-en="Read More →"
+          data-ta="மேலும் வாசிக்க →"
+          >Read More →</a>
+        </div>
+      </article>
+
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px] bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden flex-shrink-0 flex flex-col justify-between p-6 shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/thebetter_india.png" alt="thebetter_india" class="w-24 h-auto mb-0">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-en="Daughter of Beedi Rollers Fights Odds to Educate Herself, Now Supports 2,400 Youth"
+          data-ta="பீடி சுருட்டும் குடும்ப மகளாக பிறந்து கல்வி கற்றுக் கொண்ட அஷ்விதா, இப்போது 2400 இளைஞர்களுக்கு உதவுகிறார்"
+          >Daughter of Beedi Rollers Fights Odds to Educate Herself, Now Supports 2,400 Youth</h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-en="At 13, she happened to read the autobiography of Helen Keller and that was when she realised that the power to transform her life was not with anyone else, but rested completely with her."
+          data-ta="13 வயதில் ஹெலன் கெல்லர் அவர்களின் சுயசரிதையைப் படித்தபோது, தனது வாழ்க்கையை மாற்றும் சக்தி வேறு யாரோடு அல்ல,"
+          >At 13, she happened to read the autobiography of Helen Keller and that was when she realised that the power to transform her life was not with anyone else, but rested completely with her.</p>
+          <a href="https://thebetterindia.com/173716/tamil-nadu-girl-inspiring-mentor-education-india/" class="text-green-700 font-semibold mt-3 inline-block hover:underline"
+          target="_blank" rel="noopener noreferrer"
+          data-en="Read More →"
+          data-ta="மேலும் வாசிக்க →"
+          >Read More →</a>
+        </div>
+      </article>
+
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px] bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden flex-shrink-0 flex flex-col justify-between p-6 shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/hitvada.png" alt="hitvada" class="h-8 mb-3">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-en="7 EXTRAORDINARY WOMEN MAKING THE WORLD A SAFER & BETTER PLACE!"
+          data-ta="உலகத்தை ஒரு பாதுகாப்பான மற்றும் சிறந்த இடமாக மாற்றும் 7 அற்புதமான பெண்கள்!"
+          >7 EXTRAORDINARY WOMEN MAKING THE WORLD A SAFER & BETTER PLACE!</h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-en="She started the Bodhi Tree Foundation that aids first-generation college students in rural parts of the country to explore their potential through education, skill programmes, and other opportunities."
+          data-ta="அஷ்விதா பீடி சுருட்டும் குடும்பத்தில் பிறந்தார். அவர் தனது கல்வியைத் தொடர்ந்ததால், தனது குடும்பத்தின் பொருளாதார நிலையை மேம்படுத்தினார்."
+          >She started the Bodhi Tree Foundation that aids first-generation college students in rural parts of the country to explore their potential through education, skill programmes, and other opportunities...</p>
+          <a href="https://www.thehitavada.com/Encyc/2019/8/21/7-EXTRAORDINARY-WOMEN-MAKING-THE-WORLD.html" class="text-green-700 font-semibold mt-3 inline-block hover:underline"
+          target="_blank" rel="noopener noreferrer"
+          data-en="Read More → "
+          data-ta="மேலும் வாசிக்க →"
+          >Read More →</a>
+        </div>
+      </article>
+
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px] bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden flex-shrink-0 flex flex-col justify-between p-6 shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/ASuniv.png" alt="Guardian" class="w-24 h-auto mb-0">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-en="Dreams to Reality: A First Generation Graduate's Path to Harvard"
+          data-ta="கனவுகளை நிஜமாக்குதல்: ஹார்வர்டுக்கு செல்லும் முதல் தலைமுறை பட்டதாரியின் பாதை"
+            >Dreams to Reality: A First Generation Graduate's Path to Harvard</h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-en="Ashweetha’s story is remarkable in multiple ways. Her parents rolled beedis (local handmade cigarettes) for a living. She challenged societal conventions by pursuing education, ultimately becoming the first in her family to earn a college degree..."
+          data-ta="அஷ்விதாவின் கதை பல்வேறு வகைகளில் குறிப்பிடத்தக்கது. கல்வியைத் தொடர்வதன் மூலம் சமூக மரபுகளை எதிர்த்து, இறுதியில் தனது குடும்பத்தில் முதல் முறையாக கல்லூரி பட்டம் பெற்றவர்..."
+          >Ashweetha’s story is remarkable in multiple ways. Her parents rolled beedis (local handmade cigarettes) for a living. She challenged societal conventions by pursuing education, ultimately becoming the first in her family to earn a college degree...</p>
+          <a href="https://www.alumni.ashoka.edu.in/f/dreams-to-reality-a-first-generation-graduates-path-to-harvard-31580" class="text-green-700 font-semibold mt-3 inline-block hover:underline"
+          target="_blank" rel="noopener noreferrer"
+          data-en="Read More →"
+          data-ta="மேலும் வாசிக்க →"
+          >Read More →</a>
+        </div>
+      </article>
+
+      <article class="press-card w-[80vw] sm:w-[300px] md:w-[280px] lg:w-[300px] h-[420px] bg-[#fdfcf7] border border-gray-300 rounded-md relative overflow-hidden flex-shrink-0 flex flex-col justify-between p-6 shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 snap-start">
+        <div class="paper-texture absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <img src="/assets/press_portion/samvad_logo.png" alt="WSJ" class="w-26 h-auto mb-0">
+          <h3 class="text-lg font-bold mb-2 text-gray-900"
+          data-en="My dreams were confined to the four walls of my home."
+          data-ta="என் கனவுகள் என் வீட்டின் நான்கு சுவர்களுக்குள் மட்டுமே இருந்தன."
+          >my dreams were confined to the four walls of my home. </h3>
+          <p class="text-gray-700 text-sm leading-relaxed flex-grow"
+          data-en="Hailing from Tirunelveli, a rural district in Tamil Nadu, Ashweetha’s story is remarkable in multiple ways. Her parents rolled beedis (local handmade cigarettes) for a living. The first time she accessed a computer was to apply for the Young India Fellowship (YIF)...."
+          data-ta="திருநெல்வேலியில் பிறந்த அஷ்விதாவின் கதை பல்வேறு வகைகளில் குறிப்பிடத்தக்கது.YIF-க்கு விண்ணப்பிக்க அவர் முதன்முறையாக கணினியை அணுகினார்..."
+          >Hailing from Tirunelveli, a rural district in Tamil Nadu, Ashweetha’s story is remarkable in multiple ways. Her parents rolled beedis (local handmade cigarettes) for a living. The first time she accessed a computer was to apply for the Young India Fellowship (YIF)....</p>
+          <a href="https://my.ashoka.edu.in/newsletter/Ashoka-Samvad/Samvad-March-2019/pdf/ashweetha-shetty.html" class="text-green-700 font-semibold mt-3 inline-block hover:underline"
+          target="_blank" rel="noopener noreferrer"
+          data-en="Read More →"
+          data-ta="மேலும் வாசிக்க →"
+          >Read More →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Paper texture */
+  .paper-texture {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.02),
+      rgba(0,0,0,0.02) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.015),
+      rgba(0,0,0,0.015) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+    opacity: 0.3;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const track = document.getElementById('pressTrack');
+  const cards = [...track.querySelectorAll('.press-card')];
+
+  function getStep() {
+    if (!cards.length) return 300;
+    const card = cards[0];
+    const gap = parseInt(window.getComputedStyle(track).columnGap || 24, 10);
+    return Math.round(card.getBoundingClientRect().width + gap);
+  }
+
+  document.getElementById('pressPrev').addEventListener('click', () => {
+    track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+  });
+  document.getElementById('pressNext').addEventListener('click', () => {
+    track.scrollBy({ left: getStep(), behavior: 'smooth' });
   });
 </script>
 
